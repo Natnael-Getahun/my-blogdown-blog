@@ -1,5 +1,5 @@
 ---
-author: Natanel Getahun
+author: Natnael Getahun
 categories:
 - Data Visualization
 - Games
