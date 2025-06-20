@@ -26,6 +26,8 @@ tags:
 - Pes 2017
 - Data Visualization
 title: "The Impostors League: A Data-Powered Game Night Project"
+featured_image: featured-hex.png
+
 ---
 
 ## 🎮 How It All Started
