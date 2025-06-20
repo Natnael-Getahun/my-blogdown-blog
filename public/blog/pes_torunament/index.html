@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.147.8">
+<title>Using Looker Studio to Bring Data Visualization to Game Night | A Data Scientist&#39;s Journey</title>
+
+
+<meta property="twitter:site" content="@apreshill">
+<meta property="twitter:creator" content="@apreshill">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="My experience with Looker Studio">
+
+
+<meta property="og:site_name" content="A Data Scientist&#39;s Journey">
+<meta property="og:title" content="Using Looker Studio to Bring Data Visualization to Game Night | A Data Scientist&#39;s Journey">
+<meta property="og:description" content="My experience with Looker Studio" />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://natnaelgetahun.netlify.app/blog/pes_torunament/" />
+<meta property="og:locale" content="en">
+
+
+
+
+    
+        <meta property="og:image" content="https://natnaelgetahun.netlify.app/blog/pes_torunament/featured.png" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://natnaelgetahun.netlify.app/blog/pes_torunament/featured.png" >
+    
+    
+  
+  <meta itemprop="name" content="Using Looker Studio to Bring Data Visualization to Game Night">
+  <meta itemprop="description" content="I’ll start this post with a confession. It has been four months since I built the dashboard for The Impostors League project. Spoiler alert: I haven’t opened Looker Studio since then. My memory is fuzzy, but hey—that makes this post more fun to write. Think of it as a reflection, with extra sprinkles of chaos.
+What is Looker Studio?Looker Studio is Google’s free, web-based data viz tool. Think of it as the chill, younger sibling of Power BI or Tableau… the one that doesn’t ask you to install anything or set up a whole environment.">
+  <meta itemprop="datePublished" content="2025-06-18T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-06-18T00:00:00+00:00">
+  <meta itemprop="wordCount" content="695">
+  <meta itemprop="image" content="https://natnaelgetahun.netlify.app/blog/pes_torunament/featured.png">
+  <meta itemprop="keywords" content="Looker Studio,Data Visualization,Pes 2017">
+  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-TT8JDFKYXS"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-TT8JDFKYXS');
+        }
+      </script>
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.3d6a9902415b282133631fe7b3a2565055c1d42afdca42da08da5162adc4e5ae.css" integrity="sha256-PWqZAkFbKCEzYx/ns6JWUFXB1Cr9ykLaCNpRYq3E5a4=" media="screen">
+  
+  
+  <script src="/panelset.min.ed1ac24b6e16f4e2481e3d1d098ae66f5bc77438aef619e6e266d8ac5b00dc72.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.c8867e729f100f0bffd4aaa5a98bfabe06212cc04522041ba457333dadcddb2c.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="grid-container single">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://natnaelgetahun.netlify.app/" title="Home">
+      <img src="/img/blogophonic-mark-dark.png" class="dib db-l h2 w-auto" alt="A Data Scientist&#39;s Journey">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/about/" title="About Blogophonic">About</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/blog/" title="Blog">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/project/" title="Project Portfolio">Projects</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/contact/" title="Contact Me">Contact</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 ph4-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Using Looker Studio to Bring Data Visualization to Game Night</h1>
+        <h4 class="f4 mt0 mb4 lh-title measure">My experience with Looker Studio</h4>
+        <p class="f6 measure lh-copy mv1">By Natnael Getahun in <a href="https://natnaelgetahun.netlify.app/categories/data-visualization">Data Visualization</a>  <a href="https://natnaelgetahun.netlify.app/categories/games">Games</a> </p>
+        <p class="f7 db mv0 ttu">June 18, 2025</p>
+
+      
+
+      </header>
+      <section class="post-body pt5 pb4">
+        <p>I’ll start this post with a confession. It has been four months since I built the dashboard for 
+<a href="/project/pes_tournament/">The Impostors League</a> project. Spoiler alert: I haven’t opened Looker Studio since then. My memory is fuzzy, but hey—that makes this post more fun to write. Think of it as a reflection, with extra sprinkles of chaos.</p>
+
+
+
+
+<h1 id="what-is-looker-studio">What is Looker Studio?
+  <a href="#what-is-looker-studio"></a>
+</h1>
+<p>Looker Studio is Google’s free, web-based data viz tool. Think of it as the chill, younger sibling of Power BI or Tableau&hellip; the one that doesn’t ask you to install anything or set up a whole environment.</p>
+<p>It’s part of the Google Workspace ecosystem, so if you’re already living in Sheets and Docs (guilty), it fits right in.</p>
+
+
+
+
+<h2 id="importing-data">Importing Data
+  <a href="#importing-data"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Getting your data in is easy, especially from Google Sheets. You just hit <code>ADD DATA</code>, point to your spreadsheet, and boom&hellip; you’re in.</p>
+<p>Besides Sheets, it can also pull from BigQuery, Google Analytics, Excel, MySQL, Looker, and some other fancy sources I didn’t touch (because dorm Wi-Fi is a thing).</p>
+<p><img src="looker-studio-data-import.png" alt="Importing data"></p>
+
+
+
+
+<h2 id="adding-charts">Adding Charts
+  <a href="#adding-charts"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Building the charts? Honestly, kind of fun. You grab a table, drag it onto your canvas, customize a few fields, then pick out the pie chart.</p>
+<p>If you’ve ever touched Tableau or Power BI, Looker Studio will feel familiar. I watched one YouTube video (linked below) and that was all I needed:</p>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/Coe_f79Xc2o"
+title="YouTube video player" frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen></iframe>
+
+
+
+
+<h1 id="my-experience">My Experience
+  <a href="#my-experience"></a>
+</h1>
+<p>It took me around four hours to build three dashboards for our PES tournament.</p>
+<p>One dashboard showed tables and results. Another tracked attacking stats. And the third? Defensive resilience&hellip; we all needed proof that Philimon wasn’t actually “unlucky,” just bad at defense. 😄</p>
+<p>The process itself felt smooth. I could open Looker Studio in my browser, drag things around, and—most importantly—share it with my friends via link. No logins, no app installs, no “wait, how do I open this file?”</p>
+<p>But not everything was sunshine. Some calculations had to be done in Google Sheets first because Looker Studio’s formulas are&hellip; let&rsquo;s just say <em>humble</em>. And a couple of charts acted moody—they’d vanish until I refreshed the page like five times.</p>
+<p>That said, the whole thing was fun. I wasn’t stressing about perfect layouts or advanced filters. I was just telling a story with data, and Looker Studio made that surprisingly easy.</p>
+
+
+
+
+<h2 id="pros">Pros
+  <a href="#pros"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<ul>
+<li><strong>No Setup Drama</strong>: Just open it in your browser and start.</li>
+<li><strong>Beginner-Friendly</strong>: I didn’t feel like I needed a PhD to get things moving.</li>
+<li><strong>Seamless with Google Sheets</strong>: I had already planned to collect the data in Sheets, so this was perfect.</li>
+<li><strong>Instant Sharing</strong>: Sharing a link was enough for my friends to jump in.</li>
+<li><strong>Live Updates</strong>: Edits in Sheets reflected instantly on the dashboard (after you manually told it to update).</li>
+<li><strong>It’s Free</strong>: Can’t beat free, especially on a student budget.</li>
+</ul>
+
+
+
+
+<h2 id="cons">Cons
+  <a href="#cons"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<ul>
+<li><strong>Limited Customization</strong>: Want custom fonts, layouts, or fancy animations? Nope.</li>
+<li><strong>Chart Selection is Basic</strong>: You get the essentials—bar, pie, table—but nothing spicy like violin plots.</li>
+<li><strong>Buggy on Slow Wi-Fi</strong>: Sometimes charts didn&rsquo;t show up unless we refreshed the page.</li>
+<li><strong>Math is Better in Sheets</strong>: For anything slightly complex, I had to go back to Google Sheets.</li>
+<li><strong>Mobile View is Mid</strong>: On phones, scrolling was weird and layouts broke like LEGO bricks.</li>
+</ul>
+
+
+
+
+<h1 id="lessons-learned">Lessons Learned
+  <a href="#lessons-learned"></a>
+</h1>
+<ul>
+<li>Start with a clean sheet (pun intended)—good headers, no merged cells, no chaos.</li>
+<li>Do your heavy lifting (a.k.a. simple feature engineering) in Google Sheets first.</li>
+<li>Keep things simple. This isn’t Tableau, and that’s fine.</li>
+</ul>
+
+
+
+
+<h1 id="will-i-use-looker-studio-again">Will I Use Looker Studio Again?
+  <a href="#will-i-use-looker-studio-again"></a>
+</h1>
+<p>Mostly, no.</p>
+<p>Why did I feel like that was harsh?</p>
+<p>Maybe&hellip; if the situation is casual and I need something quick and collaborative.</p>
+<p>But if I’m presenting in class, applying for internships, or trying to impress someone with fancy slicers—Power BI or Tableau are still the go-tos.</p>
+<p>Still, I’d totally recommend Looker Studio to any student, beginner, or anyone who wants to dip their toes into data viz without drowning.</p>
+
+
+
+
+<h3 id="resources-i-found-useful">Resources I Found Useful
+  <a href="#resources-i-found-useful"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<ul>
+<li>
+<a href="https://support.google.com/looker-studio" target="_blank" rel="noopener">Looker Studio Documentation</a></li>
+<li>
+<a href="https://lookerstudio.google.com/gallery" target="_blank" rel="noopener">Community Visualizations Gallery</a></li>
+</ul>
+<p>If you want to see how we used the dashboard during our PES tournament, check out 
+<a href="/project/pes_tournament/">The Impostors League</a> project.</p>
+<p>Tried Looker Studio? Have strong opinions on pie charts? Drop them in the comments below—I’d love to hear your hot takes. 🍕📊</p>
+
+        
+        <details closed class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">June 18, 2025</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">4 minute read, 695 words</dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Categories:</dt>
+    <dd class="fw5 ml0"> <a href="https://natnaelgetahun.netlify.app/categories/data-visualization">Data Visualization</a>  <a href="https://natnaelgetahun.netlify.app/categories/games">Games</a> </dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Tags:</dt>
+    <dd class="fw5 ml0"> <a href="https://natnaelgetahun.netlify.app/tags/looker-studio">looker studio</a>  <a href="https://natnaelgetahun.netlify.app/tags/data-visualization">data visualization</a>  <a href="https://natnaelgetahun.netlify.app/tags/pes-2017">pes 2017</a> </dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
+    
+  </dl>
+</details>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+  
+  
+</div>
+
+      </footer>
+    </article>
+    
+      <div class="post-comments pa0 pa4-l mt4">
+  
+    
+      <script src="https://utteranc.es/client.js"
+              repo="apreshill/apero"
+              issue-term="pathname"
+              theme="boxy-light"
+              label="comments :crystal_ball:"
+              crossorigin="anonymous"
+              async
+              type="text/javascript">
+      </script>
+    
+  
+</div>
+
+    
+  </section>
+</main>
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2025 RStudio, Anywhere
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/Natnael-Getahun" title="github" target="_blank" rel="me noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.instagram.com/boar.000" title="instagram" target="_blank" rel="me noopener">
+      <i class="fab fa-instagram fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.linkedin.com/in/natnael-getahun-7207872a8/" title="linkedin" target="_blank" rel="me noopener">
+      <i class="fab fa-linkedin fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License">License</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contact form">Contact</a>
+      
+      <a class="dib pv1 ph2 link" href="/contributors/" title="Contributors">Contributors</a>
+      
+    </div>
+  </nav>
+  
+    <script>
+
+    var i, text, code, codes = document.getElementsByTagName('code');
+    for (let i = 0; i < codes.length;) {
+      code = codes[i];
+      if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+        text = code.textContent;
+        if (/^\$[^$]/.test(text) && /[^$]\$$/.test(text)) {
+          text = text.replace(/^\$/, '\\(').replace(/\$$/, '\\)');
+          code.textContent = text;
+        }
+        if (/^\\\((.|\s)+\\\)$/.test(text) ||
+            /^\\\[(.|\s)+\\\]$/.test(text) ||
+            /^\$(.|\s)+\$$/.test(text) ||
+            /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+          code.outerHTML = code.innerHTML;  
+          continue;
+        }
+      }
+      i++;
+    }
+</script>
+
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+    
+  
+  
+</footer>
+
+      </div>
+    </body>
+</html>

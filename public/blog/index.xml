@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My Blog on A Data Scientist&#39;s Journey</title>
+    <link>https://natnaelgetahun.netlify.app/blog/</link>
+    <description>Recent content in My Blog on A Data Scientist&#39;s Journey</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 18 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://natnaelgetahun.netlify.app/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using Looker Studio to Bring Data Visualization to Game Night</title>
+      <link>https://natnaelgetahun.netlify.app/blog/pes_torunament/</link>
+      <pubDate>Wed, 18 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://natnaelgetahun.netlify.app/blog/pes_torunament/</guid>
+      <description>&lt;p&gt;I’ll start this post with a confession. It has been four months since I built the dashboard for &#xD;&#xA;&lt;a href=&#34;https://natnaelgetahun.netlify.app/project/pes_tournament/&#34;&gt;The Impostors League&lt;/a&gt; project. Spoiler alert: I haven’t opened Looker Studio since then. My memory is fuzzy, but hey—that makes this post more fun to write. Think of it as a reflection, with extra sprinkles of chaos.&lt;/p&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;h1 id=&#34;what-is-looker-studio&#34;&gt;What is Looker Studio?&#xD;&#xA;  &lt;a href=&#34;#what-is-looker-studio&#34;&gt;&lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;Looker Studio is Google’s free, web-based data viz tool. Think of it as the chill, younger sibling of Power BI or Tableau&amp;hellip; the one that doesn’t ask you to install anything or set up a whole environment.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

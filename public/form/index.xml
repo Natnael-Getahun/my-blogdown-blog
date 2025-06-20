@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Forms on A Data Scientist&#39;s Journey</title>
+    <link>https://natnaelgetahun.netlify.app/form/</link>
+    <description>Recent content in Forms on A Data Scientist&#39;s Journey</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 25 Feb 2019 13:38:41 -0600</lastBuildDate>
+    <atom:link href="https://natnaelgetahun.netlify.app/form/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Contact</title>
+      <link>https://natnaelgetahun.netlify.app/contact/</link>
+      <pubDate>Mon, 25 Feb 2019 13:38:41 -0600</pubDate>
+      <guid>https://natnaelgetahun.netlify.app/contact/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
