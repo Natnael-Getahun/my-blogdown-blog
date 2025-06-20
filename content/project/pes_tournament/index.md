@@ -1,28 +1,31 @@
 ---
-author: Eric Anderson
+author: Natnael Getahun
 categories:
-- Theme Features
-- R
-- package
-date: "2019-07-01"
+- Data Visualization
+- Games
+date: "2025-06-17"
 draft: false
-excerpt: This theme has a form-to-email feature built in, thanks to the simple Formspree
-  integration. All you need to activate the form is a valid recipient email address
-  saved in the form front matter.
+excerpt: Around March, 2025, my friends and I had the idea to start a gaming 
+  tournament among ourselves. Our favorite game was a 2024-modded version of Pro 
+  Evolution Soccer 2017 (PES 2017). Right away, I knew I wanted to build an 
+  interactive dashboard to visualize our gaming statsn ending debates and trash talks 
+  we had once and for all.
 layout: single
 links:
-- icon: door-open
+- icon: chart-bar
   icon_pack: fas
-  name: website
-  url: https://bakeoff.netlify.com/
-- icon: github
-  icon_pack: fab
-  name: code
-  url: https://github.com/apreshill/bakeoff
-subtitle: An R Package
+  name: Full Visualization
+  url: https://lookerstudio.google.com/s/kkHakPXJ29U
+- icon: database
+  icon_pack: fas
+  name: data
+  url: https://docs.google.com/spreadsheets/d/1qk6I0gHj0qCiZAiNzXAJUAkHPJq1mW7C7qH513Wkig8/edit?usp=sharing
+subtitle: Using Data Visualization to Settle Friendly Debates (and Trash Talk)
 tags:
-- hugo-site
-title: Bakeoff
+- Looker Studio
+- Pes 2017
+- Data Visualization
+title: The Impostors League
 ---
 
 ![Formspree Logo](formspree-logo.png)
