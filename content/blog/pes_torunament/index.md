@@ -40,7 +40,7 @@ Besides Sheets, it can also pull from BigQuery, Google Analytics, Excel, MySQL, 
 ![Importing data](looker-studio-data-import.png)
 
 ## Adding Charts
-Building the charts? Honestly, kind of fun. You grab a table, drag it onto your canvas, customize a few fields, then pick up the pe chart. 
+Building the charts? Honestly, kind of fun. You grab a table, drag it onto your canvas, customize a few fields, then pick out the pie chart. 
 
 If you’ve ever touched Tableau or Power BI, Looker Studio will feel familiar. I watched one YouTube video (linked below) and that was all I needed:
 
@@ -52,7 +52,7 @@ allowfullscreen></iframe>
 # My Experience
 It took me around four hours to build three dashboards for our PES tournament.
 
-One dashboard showed tables and results. Another tracked attacking stats. And the third? defensive resilience... we all needed proof that Philimon wasn’t actually “unlucky,” just bad at defense. 😄
+One dashboard showed tables and results. Another tracked attacking stats. And the third? Defensive resilience... we all needed proof that Philimon wasn’t actually “unlucky,” just bad at defense. 😄
 
 The process itself felt smooth. I could open Looker Studio in my browser, drag things around, and—most importantly—share it with my friends via link. No logins, no app installs, no “wait, how do I open this file?”
 
@@ -63,9 +63,9 @@ That said, the whole thing was fun. I wasn’t stressing about perfect layouts o
 ## Pros
 - **No Setup Drama**: Just open it in your browser and start.
 - **Beginner-Friendly**: I didn’t feel like I needed a PhD to get things moving.
-- **Seamless with Google Sheets**: I had already planned to collect the data in Sheets already, so this was perfect.
+- **Seamless with Google Sheets**: I had already planned to collect the data in Sheets, so this was perfect.
 - **Instant Sharing**: Sharing a link was enough for my friends to jump in.
-- **Live Updates**: Edits in Sheets reflected instantly on the dashboard (after you manully told it to update).
+- **Live Updates**: Edits in Sheets reflected instantly on the dashboard (after you manually told it to update).
 - **It’s Free**: Can’t beat free, especially on a student budget.
 
 ## Cons
@@ -77,7 +77,7 @@ That said, the whole thing was fun. I wasn’t stressing about perfect layouts o
 
 # Lessons Learned
 - Start with a clean sheet (pun intended)—good headers, no merged cells, no chaos.
-- Do your heavy lifting (a.k.a. simple feature engneering) in Google Sheets first.
+- Do your heavy lifting (a.k.a. simple feature engineering) in Google Sheets first.
 - Keep things simple. This isn’t Tableau, and that’s fine.
 
 # Will I Use Looker Studio Again?
@@ -89,11 +89,10 @@ Maybe... if the situation is casual and I need something quick and collaborative
 
 But if I’m presenting in class, applying for internships, or trying to impress someone with fancy slicers—Power BI or Tableau are still the go-tos.
 
-Still, I’d totally recommend Looker Studio to any student, beginner, or anyone who wants to dip their toes in data viz without drowning.
+Still, I’d totally recommend Looker Studio to any student, beginner, or anyone who wants to dip their toes into data viz without drowning.
 
 ### Resources I Found Useful
 - [Looker Studio Documentation](https://support.google.com/looker-studio)
-
 - [Community Visualizations Gallery](https://lookerstudio.google.com/gallery)
 
 If you want to see how we used the dashboard during our PES tournament, check out [The Impostors League](/project/pes_tournament/) project.
