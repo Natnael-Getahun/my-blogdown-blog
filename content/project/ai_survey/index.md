@@ -5,11 +5,12 @@ categories:
 - Survey
 date: "2025-06-30"
 draft: false
-excerpt: It didn't take long to decide our research title when we were given a final
-  project during 3rd year as Statistics majors. I, for one, have been noticing the
-  different patterns in AI usage and dependency among different departments and years
-  in our campus. We set out to quantify and visualize this dependency. Here is a glimpse
-  of the final results (and the mistake we made along the way).
+excerpt: Choosing our research topic came naturally when we were assigned our
+  project as third-year statistics majors. We had already observed distinct
+  patterns in how students across different departments and academic years were
+  were using AI tools on campus. Our goal became clear... quantify and visualize
+  this growing dependency. What followed was an insightful journey of dicovery
+  (and a few mistakes along the way). Here's a look at our findings.
 layout: single
 links:
 - icon: chart-bar
