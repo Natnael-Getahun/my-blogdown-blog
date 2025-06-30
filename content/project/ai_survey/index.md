@@ -5,11 +5,11 @@ categories:
 - Survey
 date: "2025-06-30"
 draft: false
-excerpt: Around March, 2025, my friends and I had the idea to start a gaming 
-  tournament among ourselves. Our favorite game was a 2024-modded version of Pro 
-  Evolution Soccer 2017 (PES 2017). Right away, I knew I wanted to build an 
-  interactive dashboard to visualize our gaming stats, ending debates and trash talks 
-  we had once and for all.
+excerpt: It didn't take long to decide our research title when we were given a final
+  project during 3rd year as Statistics majors. I, for one, have been noticing the
+  different patterns in AI usage and dependency among different departments and years
+  in our campus. We set out to quantify and visualize this dependency. Here is a glimpse
+  of the final results (and the mistake we made along the way).
 layout: single
 links:
 - icon: chart-bar
