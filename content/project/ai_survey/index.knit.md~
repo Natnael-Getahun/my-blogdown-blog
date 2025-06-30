@@ -1,0 +1,56 @@
+---
+title: "A Partially Correct Survey on Students’ Dependency on AI"
+author: "Natnael Getahun & Team"
+date: "2025-06-30"
+categories: ["Student Projects"]
+tags: ["AI", "Survey", "Data Science", "Statistics"]
+description: "What happens when stats majors survey classmates about AI without perfect randomization? A fun, partially correct study."
+#featured: "cover.jpg" # optional
+---
+
+{{< alert note >}}
+**Heads‑up:** All the plots below are generated with the R code chunks embedded in this document. Knit once—PNG files will be saved in the same folder so Hugo can embed them automatically.
+{{< /alert >}}
+
+## 🎬 How It All Started  
+
+We’re a group of Statistics students who got curious: **how much do our classmates really lean on AI tools like ChatGPT?**  
+We decided to find out, so we built a survey, crunched some numbers, and wrote up the results. The data are eye‑opening, the trends are real, and (as we’ll happily admit) the sampling isn’t perfect.
+
+---
+
+## 🧪 Our Not‑So‑Perfect Method  
+
+- **Target population:** undergrads in four CNCS departments (CompSci, Biology, Statistics, Math).  
+- **Intended sampling:** Probability Proportional to Size stratified by department.  
+- **Reality check:** we couldn’t get full student lists in time. We shared a Google Form in lectures and Telegram groups—so convenience bias crept in.  
+- **Final N:** 142 usable responses, mostly 2nd to 4th years.
+
+---
+
+## 🔥 What We Found  
+
+| 🔍 Insight | 💭 Our Take |
+|-----------|------------|
+| **ChatGPT rules** (93 % used last month). | It’s free, fast, and always awake. |
+| **AI = study buddy.** Assignments & revision top the usage list. | Goodbye textbooks, hello prompts. |
+| **Seniority ⇒ more AI.** 4th‑years lead in heavy use. | Burn‑out or next‑level efficiency? You decide. |
+| **Math majors resist.** Not one declared “always use AI.” | Respect! |
+| **Ethical worries? Meh.** 59 % reject the “unethical” label. | AI already feels like standard kit. |
+
+---
+
+## 📊 Analysis & Plots  
+
+Below each code chunk you’ll find a quick takeaway explaining what the graphic means.
+
+### 1 • AI Tool Popularity  
+
+
+
+
+
+
+
+
+
