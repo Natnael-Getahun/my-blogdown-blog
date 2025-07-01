@@ -21,6 +21,14 @@ links:
   icon_pack: fas
   name: Full Report
   url: https://drive.google.com/file/d/1N9EIFOfKjmuzNEB4q5wbyNihKuusaH7s/view?usp=sharing
+- icon: chart-bar
+  icon_pack: fas
+  name: Clean Data
+  url: https://drive.google.com/file/d/1Fa-_Iaohg_85X0wPA-T0qnU8d2noEZPv/view?usp=sharing
+- icon: book
+  icon_pack: fas
+  name: Data Dictionary (for the clean dataset)
+  url: https://docs.google.com/document/d/17rLzOYpvxXTgm2a-D9zuQhAg2huwZR9A/edit?usp=sharing&ouid=111761609258218317244&rtpof=true&sd=true
 subtitle: A fun, partially correct, and somewhat worrying study.
 tags:
 - Survey
