@@ -6,8 +6,8 @@ date: "2025-07-10"
 draft: false
 excerpt: I explore how clustering algorithms like KMeans can be applied to create better sampling methods than using sub-city boundaries in Addis Ababa using spatial data, helping researchers and data collectors rethink how areas are grouped. A starting point, not the final word.
 categories:
-  - Data Analysis
   - Survey
+  - Geospatial Analysis
 tags:
   - Survey
   - Data Analysis
