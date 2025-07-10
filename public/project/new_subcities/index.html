@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.147.8">
+<title>An Rmarkdown post | A Data Scientist&#39;s Journey</title>
+
+
+<meta property="twitter:site" content="@apreshill">
+<meta property="twitter:creator" content="@apreshill">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="testing the excerpt field">
+
+
+<meta property="og:site_name" content="A Data Scientist&#39;s Journey">
+<meta property="og:title" content="An Rmarkdown post | A Data Scientist&#39;s Journey">
+<meta property="og:description" content="testing the excerpt field" />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://natnaelgetahun.netlify.app/project/new_subcities/" />
+<meta property="og:locale" content="en">
+
+
+
+
+    
+        <meta property="og:image" content="https://natnaelgetahun.netlify.app/project/sidebar-listing.jpg" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://natnaelgetahun.netlify.app/project/sidebar-listing.jpg" >
+    
+    
+  
+  <meta itemprop="name" content="An Rmarkdown post">
+  <meta itemprop="description" content="import pandas as pd import geopandas as gpd import matplotlib.pyplot as plt import seaborn as sns import numpy as np import osmnx as ox from sklearn.cluster import KMeans from sklearn.metrics import silhouette_score from sklearn.preprocessing import StandardScaler import plotly.express as px # Define location and tags place = &#34;አዲስ አበባ Addis Ababa أديس أبابا, ኢትዮጵያ إثيوبيا&#34; tags = {&#34;boundary&#34;: &#34;administrative&#34;, &#34;admin_level&#34;: &#34;30&#34;} # Load subcities as polygons gdf = ox.features_from_place(place, tags) gdf = gdf[gdf.geometry.type.isin([&#34;Polygon&#34;, &#34;MultiPolygon&#34;])] gdf.plot(figsize=(8, 8), edgecolor=&#34;black&#34;, color=&#34;lightblue&#34;) plt.show() gdf_filtered = gdf.loc[gdf[&#34;name&#34;].isin([ &#39;Arada&#39;, &#39;Bole&#39;, &#39;Addis Ketema&#39;, &#39;Kirkos&#39;, &#39;Gulale&#39;, &#39;Lideta&#39;, &#39;Yeka&#39;, &#39;Nefas Silk&#39;, &#39;Akaki Kaliti&#39;, &#39;Kolfe Keranio&#39; ]), [&#34;name&#34;, &#34;geometry&#34;]].reset_index(drop=True) # Plot with color and figsize gdf_filtered.plot(edgecolor=&#34;black&#34;, color=&#34;lightgreen&#34;, figsize=(8, 8)); plt.show() &lt;img src=“https://natnaelgetahun.netlify.app/project/new_subcities/index_files/figure-html/unnamed-chunk-3-3.png” width=“672” /&gt;">
+  <meta itemprop="datePublished" content="2020-12-30T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2020-12-30T00:00:00+00:00">
+  <meta itemprop="wordCount" content="705">
+  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-TT8JDFKYXS"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-TT8JDFKYXS');
+        }
+      </script>
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.3d6a9902415b282133631fe7b3a2565055c1d42afdca42da08da5162adc4e5ae.css" integrity="sha256-PWqZAkFbKCEzYx/ns6JWUFXB1Cr9ykLaCNpRYq3E5a4=" media="screen">
+  
+  
+  <script src="/panelset.min.ed1ac24b6e16f4e2481e3d1d098ae66f5bc77438aef619e6e266d8ac5b00dc72.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.8ebde67aa91f43592ffa5e30f0ae90b86016e12f49935599b2d360b1ba56f912.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="grid-container single">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://natnaelgetahun.netlify.app/" title="Home">
+      <img src="/img/blogophonic-mark-dark.png" class="dib db-l h2 w-auto" alt="A Data Scientist&#39;s Journey">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/about/" title="About Blogophonic">About</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/blog/" title="Blog">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/project/" title="Project Portfolio">Projects</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/contact/" title="Contact Me">Contact</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 ph4-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">An Rmarkdown post</h1>
+        
+        <p class="f6 measure lh-copy mv1">By Alison Hill</p>
+        <p class="f7 db mv0 ttu">December 30, 2020</p>
+
+      
+
+      </header>
+      <section class="post-body pt5 pb4">
+        <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#cf222e">import</span> <span style="color:#24292e">pandas</span> <span style="color:#cf222e">as</span> <span style="color:#24292e">pd</span>
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">import</span> <span style="color:#24292e">geopandas</span> <span style="color:#cf222e">as</span> <span style="color:#24292e">gpd</span>
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">import</span> <span style="color:#24292e">matplotlib.pyplot</span> <span style="color:#cf222e">as</span> <span style="color:#24292e">plt</span>
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">import</span> <span style="color:#24292e">seaborn</span> <span style="color:#cf222e">as</span> <span style="color:#24292e">sns</span>
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">import</span> <span style="color:#24292e">numpy</span> <span style="color:#cf222e">as</span> <span style="color:#24292e">np</span>
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">import</span> <span style="color:#24292e">osmnx</span> <span style="color:#cf222e">as</span> <span style="color:#24292e">ox</span>
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">from</span> <span style="color:#24292e">sklearn.cluster</span> <span style="color:#cf222e">import</span> KMeans
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">from</span> <span style="color:#24292e">sklearn.metrics</span> <span style="color:#cf222e">import</span> silhouette_score
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">from</span> <span style="color:#24292e">sklearn.preprocessing</span> <span style="color:#cf222e">import</span> StandardScaler
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">import</span> <span style="color:#24292e">plotly.express</span> <span style="color:#cf222e">as</span> <span style="color:#24292e">px</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#57606a"># Define location and tags</span>
+</span></span><span style="display:flex;"><span>place <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#34;አዲስ አበባ Addis Ababa أديس أبابا, ኢትዮጵያ إثيوبيا&#34;</span>
+</span></span><span style="display:flex;"><span>tags <span style="color:#0550ae">=</span> <span style="color:#1f2328">{</span><span style="color:#0a3069">&#34;boundary&#34;</span><span style="color:#1f2328">:</span> <span style="color:#0a3069">&#34;administrative&#34;</span><span style="color:#1f2328">,</span> <span style="color:#0a3069">&#34;admin_level&#34;</span><span style="color:#1f2328">:</span> <span style="color:#0a3069">&#34;30&#34;</span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#57606a"># Load subcities as polygons</span>
+</span></span><span style="display:flex;"><span>gdf <span style="color:#0550ae">=</span> ox<span style="color:#0550ae">.</span>features_from_place<span style="color:#1f2328">(</span>place<span style="color:#1f2328">,</span> tags<span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>gdf <span style="color:#0550ae">=</span> gdf<span style="color:#1f2328">[</span>gdf<span style="color:#0550ae">.</span>geometry<span style="color:#0550ae">.</span>type<span style="color:#0550ae">.</span>isin<span style="color:#1f2328">([</span><span style="color:#0a3069">&#34;Polygon&#34;</span><span style="color:#1f2328">,</span> <span style="color:#0a3069">&#34;MultiPolygon&#34;</span><span style="color:#1f2328">])]</span>
+</span></span><span style="display:flex;"><span>gdf<span style="color:#0550ae">.</span>plot<span style="color:#1f2328">(</span>figsize<span style="color:#0550ae">=</span><span style="color:#1f2328">(</span><span style="color:#0550ae">8</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">8</span><span style="color:#1f2328">),</span> edgecolor<span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;black&#34;</span><span style="color:#1f2328">,</span> color<span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;lightblue&#34;</span><span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#0550ae">.</span>show<span style="color:#1f2328">()</span>
+</span></span></code></pre></div><img src="https://natnaelgetahun.netlify.app/project/new_subcities/index_files/figure-html/unnamed-chunk-2-1.png" width="672" />
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>gdf_filtered <span style="color:#0550ae">=</span> gdf<span style="color:#0550ae">.</span>loc<span style="color:#1f2328">[</span>gdf<span style="color:#1f2328">[</span><span style="color:#0a3069">&#34;name&#34;</span><span style="color:#1f2328">]</span><span style="color:#0550ae">.</span>isin<span style="color:#1f2328">([</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0a3069">&#39;Arada&#39;</span><span style="color:#1f2328">,</span> <span style="color:#0a3069">&#39;Bole&#39;</span><span style="color:#1f2328">,</span> <span style="color:#0a3069">&#39;Addis Ketema&#39;</span><span style="color:#1f2328">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0a3069">&#39;Kirkos&#39;</span><span style="color:#1f2328">,</span> <span style="color:#0a3069">&#39;Gulale&#39;</span><span style="color:#1f2328">,</span> <span style="color:#0a3069">&#39;Lideta&#39;</span><span style="color:#1f2328">,</span> <span style="color:#0a3069">&#39;Yeka&#39;</span><span style="color:#1f2328">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0a3069">&#39;Nefas Silk&#39;</span><span style="color:#1f2328">,</span> <span style="color:#0a3069">&#39;Akaki Kaliti&#39;</span><span style="color:#1f2328">,</span> <span style="color:#0a3069">&#39;Kolfe Keranio&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">]),</span> <span style="color:#1f2328">[</span><span style="color:#0a3069">&#34;name&#34;</span><span style="color:#1f2328">,</span> <span style="color:#0a3069">&#34;geometry&#34;</span><span style="color:#1f2328">]]</span><span style="color:#0550ae">.</span>reset_index<span style="color:#1f2328">(</span>drop<span style="color:#0550ae">=</span><span style="color:#cf222e">True</span><span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#57606a"># Plot with color and figsize</span>
+</span></span><span style="display:flex;"><span>gdf_filtered<span style="color:#0550ae">.</span>plot<span style="color:#1f2328">(</span>edgecolor<span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;black&#34;</span><span style="color:#1f2328">,</span> color<span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;lightgreen&#34;</span><span style="color:#1f2328">,</span> figsize<span style="color:#0550ae">=</span><span style="color:#1f2328">(</span><span style="color:#0550ae">8</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">8</span><span style="color:#1f2328">));</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#0550ae">.</span>show<span style="color:#1f2328">()</span>
+</span></span></code></pre></div><p>&lt;img src=&ldquo;https://natnaelgetahun.netlify.app/project/new_subcities/index_files/figure-html/unnamed-chunk-3-3.png&rdquo; width=&ldquo;672&rdquo; /&gt;</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#57606a">#getting shop features</span>
+</span></span><span style="display:flex;"><span>place <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#34;Addis Ababa, Ethiopia&#34;</span>
+</span></span><span style="display:flex;"><span>tags <span style="color:#0550ae">=</span> <span style="color:#1f2328">{</span><span style="color:#0a3069">&#34;shop&#34;</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">True</span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>poi <span style="color:#0550ae">=</span> ox<span style="color:#0550ae">.</span>features_from_place<span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;Addis Ababa, Ethiopia&#34;</span><span style="color:#1f2328">,</span> tags<span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#57606a">#getting building features</span>
+</span></span><span style="display:flex;"><span>tags <span style="color:#0550ae">=</span> <span style="color:#1f2328">{</span><span style="color:#0a3069">&#34;building&#34;</span> <span style="color:#1f2328">:</span> <span style="color:#cf222e">True</span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>buildings <span style="color:#0550ae">=</span> ox<span style="color:#0550ae">.</span>features_from_place<span style="color:#1f2328">(</span>place<span style="color:#1f2328">,</span> tags<span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>buildings <span style="color:#0550ae">=</span> buildings<span style="color:#1f2328">[</span>buildings<span style="color:#0550ae">.</span>geometry<span style="color:#0550ae">.</span>type<span style="color:#0550ae">.</span>isin<span style="color:#1f2328">([</span><span style="color:#0a3069">&#34;Polygon&#34;</span><span style="color:#1f2328">,</span> <span style="color:#0a3069">&#34;MultiPolygon&#34;</span><span style="color:#1f2328">])]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#57606a">#getting road networks</span>
+</span></span><span style="display:flex;"><span>G <span style="color:#0550ae">=</span> ox<span style="color:#0550ae">.</span>graph_from_place<span style="color:#1f2328">(</span>place<span style="color:#1f2328">,</span> network_type<span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;drive&#34;</span><span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>edges <span style="color:#0550ae">=</span> ox<span style="color:#0550ae">.</span>graph_to_gdfs<span style="color:#1f2328">(</span>G<span style="color:#1f2328">,</span> nodes<span style="color:#0550ae">=</span><span style="color:#cf222e">False</span><span style="color:#1f2328">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#57606a">#plotting shop, buildings, and roads to see which features come close to showing population density</span>
+</span></span><span style="display:flex;"><span>fig<span style="color:#1f2328">,</span> ax <span style="color:#0550ae">=</span> plt<span style="color:#0550ae">.</span>subplots<span style="color:#1f2328">(</span><span style="color:#0550ae">1</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">1</span><span style="color:#1f2328">,</span> figsize<span style="color:#0550ae">=</span><span style="color:#1f2328">(</span><span style="color:#0550ae">10</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">10</span><span style="color:#1f2328">))</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>edges<span style="color:#0550ae">.</span>plot<span style="color:#1f2328">(</span>ax<span style="color:#0550ae">=</span>ax<span style="color:#1f2328">,</span> edgecolor<span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;red&#34;</span><span style="color:#1f2328">,</span> linewidth<span style="color:#0550ae">=</span><span style="color:#0550ae">0.5</span><span style="color:#1f2328">,</span> alpha<span style="color:#0550ae">=</span><span style="color:#0550ae">0.5</span><span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>buildings<span style="color:#0550ae">.</span>plot<span style="color:#1f2328">(</span>ax<span style="color:#0550ae">=</span>ax<span style="color:#1f2328">,</span> edgecolor<span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;green&#34;</span><span style="color:#1f2328">,</span> alpha<span style="color:#0550ae">=</span><span style="color:#0550ae">0.3</span><span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>gdf_filtered<span style="color:#0550ae">.</span>plot<span style="color:#1f2328">(</span>ax<span style="color:#0550ae">=</span>ax<span style="color:#1f2328">,</span> edgecolor<span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;black&#34;</span><span style="color:#1f2328">,</span> cmap<span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;Pastel2&#34;</span><span style="color:#1f2328">,</span> alpha<span style="color:#0550ae">=</span><span style="color:#0550ae">0.5</span><span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>poi<span style="color:#0550ae">.</span>plot<span style="color:#1f2328">(</span>ax<span style="color:#0550ae">=</span>ax<span style="color:#1f2328">,</span> markersize<span style="color:#0550ae">=</span><span style="color:#0550ae">8</span><span style="color:#1f2328">,</span> color<span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;blue&#34;</span><span style="color:#1f2328">,</span> zorder<span style="color:#0550ae">=</span><span style="color:#0550ae">3</span><span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#0550ae">.</span>show<span style="color:#1f2328">()</span>
+</span></span></code></pre></div><img src="https://natnaelgetahun.netlify.app/project/new_subcities/index_files/figure-html/unnamed-chunk-5-5.png" width="672" />
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>edges <span style="color:#0550ae">=</span> edges<span style="color:#1f2328">[[</span><span style="color:#0a3069">&#34;geometry&#34;</span><span style="color:#1f2328">]]</span><span style="color:#0550ae">.</span>reset_index<span style="color:#1f2328">(</span>drop<span style="color:#0550ae">=</span><span style="color:#cf222e">True</span><span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>edges<span style="color:#0550ae">.</span>head<span style="color:#1f2328">()</span>
+</span></span></code></pre></div><hr>
+<pre><code>                                        geometry
+</code></pre>
+
+
+
+
+<h2 id="4--linestring-3874679-9022170-3874678-9022">0  LINESTRING (38.74686 9.022465, 38.74682 9.022&hellip;
+1  LINESTRING (38.74682 9.022353, 38.74681 9.022&hellip;
+2  LINESTRING (38.74681 9.022292, 38.74680 9.022&hellip;
+3  LINESTRING (38.74680 9.022231, 38.74679 9.022&hellip;
+4  LINESTRING (38.74679 9.022170, 38.74678 9.022&hellip;
+  <a href="#4--linestring-3874679-9022170-3874678-9022"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>edges<span style="color:#0550ae">.</span>crs
+</span></span></code></pre></div><hr>
+<p>&lt;Geographic 2D CRS: EPSG:4326&gt;
+Name: WGS 84
+Axis Info [ellipsoidal]:</p>
+<ul>
+<li>Lat[north]: Geodetic latitude (degree)</li>
+<li>Lon[east]: Geodetic longitude (degree)
+Area of Use:</li>
+<li>name: World</li>
+<li>bounds: (-180.0, -90.0, 180.0, 90.0)
+Datum: World Geodetic System 1984</li>
+<li>Ellipsoid: WGS 84</li>
+<li>Prime Meridian: Greenwich</li>
+</ul>
+<hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>edge_points <span style="color:#0550ae">=</span> edges<span style="color:#0550ae">.</span>copy<span style="color:#1f2328">()</span>
+</span></span><span style="display:flex;"><span><span style="color:#57606a">#converting to meters crs(UTM zone 37N for Ethiopia)</span>
+</span></span><span style="display:flex;"><span>edge_points <span style="color:#0550ae">=</span> edge_points<span style="color:#0550ae">.</span>to_crs<span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;EPSG:32637&#34;</span><span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>edge_points<span style="color:#0550ae">.</span>crs
+</span></span></code></pre></div><hr>
+<Projected CRS: EPSG:32637>
+Name: WGS 84 / UTM zone 37N
+Axis Info [cartesian]:
+- E[east]: Easting (metre)
+- N[north]: Northing (metre)
+Area of Use:
+- name: World - N hemisphere - 36°E to 42°E - by country
+- bounds: (36.0, 0.0, 42.0, 84.0)
+Coordinate Operation:
+- name: UTM zone 37N
+- method: Transverse Mercator
+Datum: World Geodetic System 1984
+- Ellipsoid: WGS 84
+- Prime Meridian: Greenwich
+---
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#57606a"># calculating the mid point of the road</span>
+</span></span><span style="display:flex;"><span><span style="color:#57606a"># .centroid can pick a point outside the road for curved roads</span>
+</span></span><span style="display:flex;"><span><span style="color:#57606a">#normalized=True mean 0.5 refers to 50% of the line&#39;s length not absolute distance</span>
+</span></span><span style="display:flex;"><span>edge_points<span style="color:#1f2328">[</span><span style="color:#0a3069">&#34;geometry&#34;</span><span style="color:#1f2328">]</span> <span style="color:#0550ae">=</span> edge_points<span style="color:#0550ae">.</span>geometry<span style="color:#0550ae">.</span>interpolate<span style="color:#1f2328">(</span><span style="color:#0550ae">0.5</span><span style="color:#1f2328">,</span> normalized<span style="color:#0550ae">=</span><span style="color:#cf222e">True</span><span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>edge_points<span style="color:#1f2328">[</span><span style="color:#0a3069">&#34;x&#34;</span><span style="color:#1f2328">]</span> <span style="color:#0550ae">=</span> edge_points<span style="color:#0550ae">.</span>geometry<span style="color:#0550ae">.</span>x
+</span></span><span style="display:flex;"><span>edge_points<span style="color:#1f2328">[</span><span style="color:#0a3069">&#34;y&#34;</span><span style="color:#1f2328">]</span> <span style="color:#0550ae">=</span> edge_points<span style="color:#0550ae">.</span>geometry<span style="color:#0550ae">.</span>y
+</span></span><span style="display:flex;"><span>edge_points<span style="color:#0550ae">.</span>head<span style="color:#1f2328">()</span>
+</span></span></code></pre></div><hr>
+<pre><code>                geometry            x            y
+</code></pre>
+
+
+
+
+<h2 id="4--point-486373438-9977394-486373438000-99773940000">0  POINT (486374.248 99780.41) 486374.247500 99780.414000
+1  POINT (486373.924 99777.82) 486373.924000 99777.824000
+2  POINT (486373.762 99776.53) 486373.762000 99776.525000
+3  POINT (486373.600 99775.23) 486373.600000 99775.233000
+4  POINT (486373.438 99773.94) 486373.438000 99773.940000
+  <a href="#4--point-486373438-9977394-486373438000-99773940000"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>X <span style="color:#0550ae">=</span> edge_points<span style="color:#1f2328">[[</span><span style="color:#0a3069">&#34;x&#34;</span><span style="color:#1f2328">,</span> <span style="color:#0a3069">&#34;y&#34;</span><span style="color:#1f2328">]]</span><span style="color:#0550ae">.</span>values
+</span></span><span style="display:flex;"><span>scaler <span style="color:#0550ae">=</span> StandardScaler<span style="color:#1f2328">()</span>
+</span></span><span style="display:flex;"><span>X <span style="color:#0550ae">=</span> scaler<span style="color:#0550ae">.</span>fit_transform<span style="color:#1f2328">(</span>X<span style="color:#1f2328">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>distortions <span style="color:#0550ae">=</span> <span style="color:#1f2328">[]</span>
+</span></span><span style="display:flex;"><span>K <span style="color:#0550ae">=</span> <span style="color:#6639ba">range</span><span style="color:#1f2328">(</span><span style="color:#0550ae">1</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">20</span><span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">for</span> k <span style="color:#0550ae">in</span> K<span style="color:#1f2328">:</span>
+</span></span><span style="display:flex;"><span>    kmeans <span style="color:#0550ae">=</span> KMeans<span style="color:#1f2328">(</span>n_clusters<span style="color:#0550ae">=</span>k<span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>    kmeans<span style="color:#0550ae">.</span>fit<span style="color:#1f2328">(</span>X<span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>    distortions<span style="color:#0550ae">.</span>append<span style="color:#1f2328">(</span>kmeans<span style="color:#0550ae">.</span>inertia_<span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#0550ae">.</span>figure<span style="color:#1f2328">(</span>figsize<span style="color:#0550ae">=</span><span style="color:#1f2328">(</span><span style="color:#0550ae">16</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">10</span><span style="color:#1f2328">))</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#0550ae">.</span>plot<span style="color:#1f2328">(</span>K<span style="color:#1f2328">,</span> distortions<span style="color:#1f2328">,</span> <span style="color:#0a3069">&#34;bx-&#34;</span><span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#0550ae">.</span>title<span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;Elbow Method for optimal K&#34;</span><span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#0550ae">.</span>xlabel<span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;k&#34;</span><span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#0550ae">.</span>ylabel<span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;Distortion&#34;</span><span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#0550ae">.</span>show<span style="color:#1f2328">()</span>
+</span></span></code></pre></div><img src="https://natnaelgetahun.netlify.app/project/new_subcities/index_files/figure-html/unnamed-chunk-11-7.png" width="672" />
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>kmeans <span style="color:#0550ae">=</span> KMeans<span style="color:#1f2328">(</span>n_clusters<span style="color:#0550ae">=</span><span style="color:#0550ae">5</span><span style="color:#1f2328">,</span> random_state<span style="color:#0550ae">=</span><span style="color:#0550ae">42</span><span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>kmeans_7 <span style="color:#0550ae">=</span> kmeans<span style="color:#0550ae">.</span>fit<span style="color:#1f2328">(</span>X<span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>kmeans_7<span style="color:#0550ae">.</span>labels_
+</span></span></code></pre></div><hr>
+
+
+
+
+<h2 id="array3-3-3--1-1-1-dtypeint32">array([3, 3, 3, &hellip;, 1, 1, 1], dtype=int32)
+  <a href="#array3-3-3--1-1-1-dtypeint32"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>edge_points<span style="color:#1f2328">[</span><span style="color:#0a3069">&#34;cluster&#34;</span><span style="color:#1f2328">]</span> <span style="color:#0550ae">=</span> kmeans_7<span style="color:#0550ae">.</span>labels_
+</span></span><span style="display:flex;"><span>edge_points <span style="color:#0550ae">=</span> edge_points<span style="color:#0550ae">.</span>set_geometry<span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;geometry&#34;</span><span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>edge_points_latlon <span style="color:#0550ae">=</span> edge_points<span style="color:#0550ae">.</span>to_crs<span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;EPSG:4326&#34;</span><span style="color:#1f2328">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#57606a">#Kmenas only plot</span>
+</span></span><span style="display:flex;"><span>fig<span style="color:#1f2328">,</span> ax <span style="color:#0550ae">=</span> plt<span style="color:#0550ae">.</span>subplots<span style="color:#1f2328">(</span>figsize<span style="color:#0550ae">=</span><span style="color:#1f2328">(</span><span style="color:#0550ae">10</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">10</span><span style="color:#1f2328">))</span>
+</span></span><span style="display:flex;"><span>edge_points_latlon<span style="color:#0550ae">.</span>plot<span style="color:#1f2328">(</span>column<span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;cluster&#34;</span><span style="color:#1f2328">,</span> ax<span style="color:#0550ae">=</span>ax<span style="color:#1f2328">,</span> cmap<span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;tab20&#34;</span><span style="color:#1f2328">,</span> markersize<span style="color:#0550ae">=</span><span style="color:#0550ae">50</span><span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>gdf_filtered<span style="color:#0550ae">.</span>plot<span style="color:#1f2328">(</span>edgecolor<span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;grey&#34;</span><span style="color:#1f2328">,</span> ax<span style="color:#0550ae">=</span>ax<span style="color:#1f2328">,</span> facecolor<span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;none&#34;</span><span style="color:#1f2328">,</span> linewidth<span style="color:#0550ae">=</span><span style="color:#0550ae">1</span><span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#0550ae">.</span>title<span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;Road Clusters by Density and Proximity&#34;</span><span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>ax<span style="color:#0550ae">.</span>set_axis_off<span style="color:#1f2328">()</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#0550ae">.</span>show<span style="color:#1f2328">()</span>
+</span></span></code></pre></div><img src="https://natnaelgetahun.netlify.app/project/new_subcities/index_files/figure-html/unnamed-chunk-14-9.png" width="672" />
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#57606a">#Extracting Cluster Centroids</span>
+</span></span><span style="display:flex;"><span>cluster_centers <span style="color:#0550ae">=</span> scaler<span style="color:#0550ae">.</span>inverse_transform<span style="color:#1f2328">(</span>kmeans<span style="color:#0550ae">.</span>cluster_centers_<span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>cluster_centers_gdf <span style="color:#0550ae">=</span> gpd<span style="color:#0550ae">.</span>GeoDataFrame<span style="color:#1f2328">(</span>geometry<span style="color:#0550ae">=</span>gpd<span style="color:#0550ae">.</span>points_from_xy<span style="color:#1f2328">(</span>cluster_centers<span style="color:#1f2328">[:,</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">],</span> cluster_centers<span style="color:#1f2328">[:,</span> <span style="color:#0550ae">1</span><span style="color:#1f2328">]),</span> crs<span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;EPSG:32637&#34;</span><span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>cluster_centers_gdf <span style="color:#0550ae">=</span> cluster_centers_gdf<span style="color:#0550ae">.</span>to_crs<span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;EPSG:4326&#34;</span><span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>cluster_coords <span style="color:#0550ae">=</span> cluster_centers_gdf<span style="color:#0550ae">.</span>geometry<span style="color:#0550ae">.</span>apply<span style="color:#1f2328">(</span><span style="color:#cf222e">lambda</span> pt<span style="color:#1f2328">:</span> <span style="color:#1f2328">(</span>pt<span style="color:#0550ae">.</span>y<span style="color:#1f2328">,</span> pt<span style="color:#0550ae">.</span>x<span style="color:#1f2328">))</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cluster_coords
+</span></span></code></pre></div><hr>
+
+
+
+
+<h2 id="dtype-object">0     (9.012345, 38.765432)
+1     (8.987654, 38.712345)
+2     (9.045678, 38.798765)
+3     (8.956789, 38.689012)
+4     (9.023456, 38.734567)
+dtype: object
+  <a href="#dtype-object"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>score <span style="color:#0550ae">=</span> silhouette_score<span style="color:#1f2328">(</span>X<span style="color:#1f2328">,</span> edge_points<span style="color:#1f2328">[</span><span style="color:#0a3069">&#34;cluster&#34;</span><span style="color:#1f2328">])</span>
+</span></span><span style="display:flex;"><span><span style="color:#6639ba">print</span><span style="color:#1f2328">(</span><span style="color:#0a3069">f</span><span style="color:#0a3069">&#34;Silhouette Score: </span><span style="color:#0a3069">{</span>score<span style="color:#0a3069">:</span><span style="color:#0a3069">.2f</span><span style="color:#0a3069">}</span><span style="color:#0a3069">&#34;</span><span style="color:#1f2328">)</span>
+</span></span></code></pre></div><hr>
+
+
+
+
+<h2 id="heading">&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;
+  <a href="#heading"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#57606a"># Convert clusters to DataFrame</span>
+</span></span><span style="display:flex;"><span>cluster_df <span style="color:#0550ae">=</span> pd<span style="color:#0550ae">.</span>DataFrame<span style="color:#1f2328">({</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0a3069">&#39;lat&#39;</span><span style="color:#1f2328">:</span> edge_points_latlon<span style="color:#0550ae">.</span>geometry<span style="color:#0550ae">.</span>y<span style="color:#1f2328">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0a3069">&#39;lon&#39;</span><span style="color:#1f2328">:</span> edge_points_latlon<span style="color:#0550ae">.</span>geometry<span style="color:#0550ae">.</span>x<span style="color:#1f2328">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0a3069">&#39;cluster&#39;</span><span style="color:#1f2328">:</span> edge_points_latlon<span style="color:#1f2328">[</span><span style="color:#0a3069">&#39;cluster&#39;</span><span style="color:#1f2328">]</span> <span style="color:#0550ae">+</span> <span style="color:#0550ae">1</span>  <span style="color:#57606a"># Clusters start from 1</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">})</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#57606a"># Create base scatter map</span>
+</span></span><span style="display:flex;"><span>fig <span style="color:#0550ae">=</span> px<span style="color:#0550ae">.</span>scatter_map<span style="color:#1f2328">(</span>
+</span></span><span style="display:flex;"><span>    cluster_df<span style="color:#1f2328">,</span>
+</span></span><span style="display:flex;"><span>    lat<span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;lat&#34;</span><span style="color:#1f2328">,</span>
+</span></span><span style="display:flex;"><span>    lon<span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;lon&#34;</span><span style="color:#1f2328">,</span>
+</span></span><span style="display:flex;"><span>    color<span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;cluster&#34;</span><span style="color:#1f2328">,</span>
+</span></span><span style="display:flex;"><span>    color_discrete_sequence<span style="color:#0550ae">=</span>px<span style="color:#0550ae">.</span>colors<span style="color:#0550ae">.</span>qualitative<span style="color:#0550ae">.</span>Plotly<span style="color:#1f2328">,</span>
+</span></span><span style="display:flex;"><span>    zoom<span style="color:#0550ae">=</span><span style="color:#0550ae">11</span><span style="color:#1f2328">,</span>
+</span></span><span style="display:flex;"><span>    height<span style="color:#0550ae">=</span><span style="color:#0550ae">800</span><span style="color:#1f2328">,</span>
+</span></span><span style="display:flex;"><span>    title<span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;Addis Ababa Road Clusters&#34;</span><span style="color:#1f2328">,</span>
+</span></span><span style="display:flex;"><span>    opacity<span style="color:#0550ae">=</span><span style="color:#0550ae">0.3</span><span style="color:#1f2328">,</span>
+</span></span><span style="display:flex;"><span>    hover_data<span style="color:#0550ae">=</span><span style="color:#1f2328">[</span><span style="color:#0a3069">&#39;cluster&#39;</span><span style="color:#1f2328">],</span>
+</span></span><span style="display:flex;"><span>    map_style<span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;open-street-map&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#57606a"># Add cluster centers with prominent markers</span>
+</span></span><span style="display:flex;"><span>centroid_df <span style="color:#0550ae">=</span> pd<span style="color:#0550ae">.</span>DataFrame<span style="color:#1f2328">({</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0a3069">&#39;lat&#39;</span><span style="color:#1f2328">:</span> <span style="color:#1f2328">[</span>pt<span style="color:#0550ae">.</span>y <span style="color:#cf222e">for</span> pt <span style="color:#0550ae">in</span> cluster_centers_gdf<span style="color:#0550ae">.</span>geometry<span style="color:#1f2328">],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0a3069">&#39;lon&#39;</span><span style="color:#1f2328">:</span> <span style="color:#1f2328">[</span>pt<span style="color:#0550ae">.</span>x <span style="color:#cf222e">for</span> pt <span style="color:#0550ae">in</span> cluster_centers_gdf<span style="color:#0550ae">.</span>geometry<span style="color:#1f2328">],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0a3069">&#39;cluster&#39;</span><span style="color:#1f2328">:</span> <span style="color:#1f2328">[</span><span style="color:#0a3069">f</span><span style="color:#0a3069">&#34;Cluster Center </span><span style="color:#0a3069">{</span>i<span style="color:#0550ae">+</span><span style="color:#0550ae">1</span><span style="color:#0a3069">}</span><span style="color:#0a3069">&#34;</span> <span style="color:#cf222e">for</span> i <span style="color:#0550ae">in</span> <span style="color:#6639ba">range</span><span style="color:#1f2328">(</span><span style="color:#6639ba">len</span><span style="color:#1f2328">(</span>cluster_centers_gdf<span style="color:#1f2328">))]</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">})</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fig<span style="color:#0550ae">.</span>add_trace<span style="color:#1f2328">(</span>go<span style="color:#0550ae">.</span>Scattermap<span style="color:#1f2328">(</span>
+</span></span><span style="display:flex;"><span>    lat<span style="color:#0550ae">=</span>centroid_df<span style="color:#1f2328">[</span><span style="color:#0a3069">&#39;lat&#39;</span><span style="color:#1f2328">],</span>
+</span></span><span style="display:flex;"><span>    lon<span style="color:#0550ae">=</span>centroid_df<span style="color:#1f2328">[</span><span style="color:#0a3069">&#39;lon&#39;</span><span style="color:#1f2328">],</span>
+</span></span><span style="display:flex;"><span>    mode<span style="color:#0550ae">=</span><span style="color:#0a3069">&#39;markers+text&#39;</span><span style="color:#1f2328">,</span>
+</span></span><span style="display:flex;"><span>    marker<span style="color:#0550ae">=</span><span style="color:#6639ba">dict</span><span style="color:#1f2328">(</span>
+</span></span><span style="display:flex;"><span>        size<span style="color:#0550ae">=</span><span style="color:#0550ae">24</span><span style="color:#1f2328">,</span>  <span style="color:#57606a"># Larger size</span>
+</span></span><span style="display:flex;"><span>        color<span style="color:#0550ae">=</span><span style="color:#0a3069">&#39;darkorange&#39;</span><span style="color:#1f2328">,</span>  <span style="color:#57606a"># Vibrant color</span>
+</span></span><span style="display:flex;"><span>        symbol<span style="color:#0550ae">=</span><span style="color:#0a3069">&#39;triangle-up&#39;</span><span style="color:#1f2328">,</span>  <span style="color:#57606a"># Distinct shape</span>
+</span></span><span style="display:flex;"><span>        opacity<span style="color:#0550ae">=</span><span style="color:#0550ae">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">),</span>
+</span></span><span style="display:flex;"><span>    text<span style="color:#0550ae">=</span>centroid_df<span style="color:#1f2328">[</span><span style="color:#0a3069">&#39;cluster&#39;</span><span style="color:#1f2328">],</span>
+</span></span><span style="display:flex;"><span>    textposition<span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;top center&#34;</span><span style="color:#1f2328">,</span>
+</span></span><span style="display:flex;"><span>    textfont<span style="color:#0550ae">=</span><span style="color:#6639ba">dict</span><span style="color:#1f2328">(</span>
+</span></span><span style="display:flex;"><span>        size<span style="color:#0550ae">=</span><span style="color:#0550ae">30</span><span style="color:#1f2328">,</span>
+</span></span><span style="display:flex;"><span>        color<span style="color:#0550ae">=</span><span style="color:#0a3069">&#39;white&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">),</span>
+</span></span><span style="display:flex;"><span>    hoverinfo<span style="color:#0550ae">=</span><span style="color:#0a3069">&#39;text&#39;</span><span style="color:#1f2328">,</span>
+</span></span><span style="display:flex;"><span>    name<span style="color:#0550ae">=</span><span style="color:#0a3069">&#39;Cluster Centers&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">))</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#57606a"># Configure map view</span>
+</span></span><span style="display:flex;"><span>fig<span style="color:#0550ae">.</span>update_layout<span style="color:#1f2328">(</span>
+</span></span><span style="display:flex;"><span>    mapbox<span style="color:#0550ae">=</span><span style="color:#6639ba">dict</span><span style="color:#1f2328">(</span>
+</span></span><span style="display:flex;"><span>        center<span style="color:#0550ae">=</span><span style="color:#6639ba">dict</span><span style="color:#1f2328">(</span>lat<span style="color:#0550ae">=</span><span style="color:#0550ae">9.03</span><span style="color:#1f2328">,</span> lon<span style="color:#0550ae">=</span><span style="color:#0550ae">38.74</span><span style="color:#1f2328">),</span>
+</span></span><span style="display:flex;"><span>        zoom<span style="color:#0550ae">=</span><span style="color:#0550ae">11</span><span style="color:#1f2328">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">),</span>
+</span></span><span style="display:flex;"><span>    margin<span style="color:#0550ae">=</span><span style="color:#1f2328">{</span><span style="color:#0a3069">&#34;r&#34;</span><span style="color:#1f2328">:</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span><span style="color:#0a3069">&#34;t&#34;</span><span style="color:#1f2328">:</span><span style="color:#0550ae">40</span><span style="color:#1f2328">,</span><span style="color:#0a3069">&#34;l&#34;</span><span style="color:#1f2328">:</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span><span style="color:#0a3069">&#34;b&#34;</span><span style="color:#1f2328">:</span><span style="color:#0550ae">0</span><span style="color:#1f2328">},</span>
+</span></span><span style="display:flex;"><span>    showlegend<span style="color:#0550ae">=</span><span style="color:#cf222e">True</span><span style="color:#1f2328">,</span>
+</span></span><span style="display:flex;"><span>    legend<span style="color:#0550ae">=</span><span style="color:#6639ba">dict</span><span style="color:#1f2328">(</span>
+</span></span><span style="display:flex;"><span>        yanchor<span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;top&#34;</span><span style="color:#1f2328">,</span>
+</span></span><span style="display:flex;"><span>        y<span style="color:#0550ae">=</span><span style="color:#0550ae">0.99</span><span style="color:#1f2328">,</span>
+</span></span><span style="display:flex;"><span>        xanchor<span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;left&#34;</span><span style="color:#1f2328">,</span>
+</span></span><span style="display:flex;"><span>        x<span style="color:#0550ae">=</span><span style="color:#0550ae">0.01</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#57606a"># Style regular points</span>
+</span></span><span style="display:flex;"><span>fig<span style="color:#0550ae">.</span>update_traces<span style="color:#1f2328">(</span>
+</span></span><span style="display:flex;"><span>    marker<span style="color:#0550ae">=</span><span style="color:#6639ba">dict</span><span style="color:#1f2328">(</span>
+</span></span><span style="display:flex;"><span>        size<span style="color:#0550ae">=</span><span style="color:#0550ae">4</span><span style="color:#1f2328">,</span>
+</span></span><span style="display:flex;"><span>        opacity<span style="color:#0550ae">=</span><span style="color:#0550ae">0.3</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">),</span>
+</span></span><span style="display:flex;"><span>    selector<span style="color:#0550ae">=</span><span style="color:#6639ba">dict</span><span style="color:#1f2328">(</span>mode<span style="color:#0550ae">=</span><span style="color:#0a3069">&#39;markers&#39;</span><span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fig
+</span></span></code></pre></div><p>
+<a href="map.html">View Interactive Map</a></p>
+
+        
+        <details closed class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">December 30, 2020</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">4 minute read, 705 words</dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
+    
+  </dl>
+</details>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+    <a class="prev dtc pr2 tl v-top fw6"
+    href="https://natnaelgetahun.netlify.app/project/pes_tournament/">&larr; The Impostors League: A Data-Powered Game Night Project</a>
+  
+  
+  
+</div>
+
+      </footer>
+    </article>
+    
+  </section>
+</main>
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2025 RStudio, Anywhere
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/Natnael-Getahun" title="github" target="_blank" rel="me noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.instagram.com/boar.000" title="instagram" target="_blank" rel="me noopener">
+      <i class="fab fa-instagram fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.linkedin.com/in/natnael-getahun-7207872a8/" title="linkedin" target="_blank" rel="me noopener">
+      <i class="fab fa-linkedin fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License">License</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contact form">Contact</a>
+      
+      <a class="dib pv1 ph2 link" href="/contributors/" title="Contributors">Contributors</a>
+      
+    </div>
+  </nav>
+  
+    <script>
+
+    var i, text, code, codes = document.getElementsByTagName('code');
+    for (let i = 0; i < codes.length;) {
+      code = codes[i];
+      if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+        text = code.textContent;
+        if (/^\$[^$]/.test(text) && /[^$]\$$/.test(text)) {
+          text = text.replace(/^\$/, '\\(').replace(/\$$/, '\\)');
+          code.textContent = text;
+        }
+        if (/^\\\((.|\s)+\\\)$/.test(text) ||
+            /^\\\[(.|\s)+\\\]$/.test(text) ||
+            /^\$(.|\s)+\$$/.test(text) ||
+            /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+          code.outerHTML = code.innerHTML;  
+          continue;
+        }
+      }
+      i++;
+    }
+</script>
+
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+    
+  
+  
+</footer>
+
+      </div>
+    </body>
+</html>

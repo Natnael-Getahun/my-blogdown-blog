@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Analysis on A Data Scientist&#39;s Journey</title>
+    <link>https://natnaelgetahun.netlify.app/tags/data-analysis/</link>
+    <description>Recent content in Data Analysis on A Data Scientist&#39;s Journey</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 30 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://natnaelgetahun.netlify.app/tags/data-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Partially Correct Survey on Students’ AI Dependency</title>
+      <link>https://natnaelgetahun.netlify.app/project/ai_survey/</link>
+      <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://natnaelgetahun.netlify.app/project/ai_survey/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Heads‑up:&lt;/strong&gt; All the plots below were generated from our survey data analysis using R. For more detail, check out this &#xD;&#xA;&lt;a href=&#34;https://natnaelgetahun.netlify.app/blog/r_ai_survey&#34;&gt;separate blog post&lt;/a&gt;.&lt;/p&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;h2 id=&#34;-how-it-all-started&#34;&gt;🎬 How It All Started&#xD;&#xA;  &lt;a href=&#34;#-how-it-all-started&#34;&gt;&lt;svg class=&#34;anchor-symbol&#34; aria-hidden=&#34;true&#34; height=&#34;26&#34; width=&#34;26&#34; viewBox=&#34;0 0 22 22&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&#xD;&#xA;      &lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;currentColor&#34;&gt;&lt;/path&gt;&#xD;&#xA;      &lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z&#34;&gt;&lt;/path&gt;&#xD;&#xA;    &lt;/svg&gt;&lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;We&amp;rsquo;re a group of Statistics students who got curious: &lt;strong&gt;how much do our classmates really lean on AI tools like ChatGPT?&lt;/strong&gt; We used this idea as a spring board for our end of year research project.&#xA;We built a survey, crunched some numbers, and wrote up the results. The data are eye‑opening, the trends are interestingl, and (as we&amp;rsquo;ll happily admit) the sampling isn&amp;rsquo;t perfect.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Coming Soon!</title>
+      <link>https://natnaelgetahun.netlify.app/blog/r_ai_survey/</link>
+      <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://natnaelgetahun.netlify.app/blog/r_ai_survey/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Coming Soon!&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
