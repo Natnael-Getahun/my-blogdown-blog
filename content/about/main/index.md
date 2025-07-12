@@ -6,7 +6,7 @@ use_featured: false # if false, use most recent by date
 number_categories: 3 # set to zero to exclude
 show_intro: true
 intro: "
-  Hey there — I’m Natnael Getahun, a third-year Statistics student at Addis Ababa University who’s obsessed with numbers, data, and all the stories they can tell.
+  Hey there — I’m Natnael Getahun, a fourth-year Statistics student at Addis Ababa University who’s obsessed with numbers, data, and all the stories they can tell.
 
 \nI started as a young boy who obsessed over math problems he couldn't solve. I continued to Statistics in the hopes of finding real world application of mathematics. Along the way, I discovered two worlds that completely changed the game for me: artificial intelligence and finance. Now, I spend a good chunk of my time exploring how data can be used to make smart predictions — stock prices, market trends, economic shifts, you name it. There’s something deeply satisfying (and yeah, a little bit like having a superpower) about using raw numbers to anticipate what’s coming.
 

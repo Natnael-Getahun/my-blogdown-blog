@@ -7,5 +7,4 @@ headline: |
 ---
 
 <!-- this is a subheadline -->
-I'm an aspiring Data Sceintis and capital market enthusiast.
-
+I'm an aspiring Data Scientist.
