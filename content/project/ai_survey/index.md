@@ -35,7 +35,7 @@ tags:
 - Data Analysis
 - Data Visualization
 title: "A Partially Correct Survey on Students’ AI Dependency"
-featured_image: featured-hex.png
+featured_image: /img/featured-hex.png
 ---
 
 **Heads‑up:** All the plots below were generated from our survey data analysis using R. For more detail, check out this [separate blog post](/blog/r_ai_survey).
