@@ -1,6 +1,6 @@
 ---
 title: "Clustering New Addis Ababa 'Sub cities': A Guide for Data Collectors"
-subtitle: A pottential efficiency boost for data collection in Addis Ababa.
+subtitle: A potential efficiency boost for data collection in Addis Ababa.
 author: Natnael Getahun
 date: "2025-07-10"
 draft: false
@@ -25,13 +25,13 @@ output: blogdown::html_page
 
 The idea for this project came to me when I was working as a research assistant intern at the **East African Trading House** plc. We were collecting data from local shops. With population information being scarce, we were told to sample from clusters using the administrative sub-city classifications of Addis Ababa. About 100 samples were going to be taken from each sub-city.
 
-I had a few problems with this method. As can be seen the the Addis Ababa map below (the fully green map), not all sub-cities cover the same area. Some areas with about the same population density across the whole area but **difference in areas** were given the same amount of sampling size. This didn't make sense to me. So I set out to create a **better way of clustering** in Addis Ababa. You may see this as a mission to create **new "sub-cities"** that make sense from a statistician's perspective.
+I had a few problems with this method. As can be seen in the Addis Ababa map below (the fully green map), not all sub-cities cover the same area. Some areas with about the same population density across the whole area but **difference in areas** were given the same amount of sampling size. This didn't make sense to me. So I set out to create a **better way of clustering** in Addis Ababa. You may see this as a mission to create **new "sub-cities"** that make sense from a statistician's perspective.
 
 ## Aim of the project
 
 - Find the **optimal number of clusters** of roads with high density and proximity to cover (without additional metrics like income, population, etc. considered)
 - To get the most effective way of clusters to cover the whole Addis Ababa (with only **road proximity** consideration)
-- To find the geographical centers of those clusters
+- To find the geographical centres of those clusters
 
 Using **OpenStreetMap** boundaries and clustering algorithms like **KMeans**, I attempted to generate practical groupings that could better reflect urban layout than the administrative zones alone.
 
@@ -56,7 +56,7 @@ import plotly.graph_objects as go
 ```
 ## Step 1: Getting the Data and Exploratory Data Analysis
 
-I started by downloading administrative sub city boundaries of Addis Ababa using `osmnx`.
+I started by downloading the administrative sub-city boundaries of Addis Ababa using `osmnx`.
 
 
 ```python
@@ -73,7 +73,7 @@ plt.show()
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" />
 
-As you can see, the code has given as areas outside of Addis Ababa as well. Next, I filtered out polygons that are in Addis Ababa only.
+As you can see, the code has given areas outside of Addis Ababa as well. Next, I filtered out polygons that are in Addis Ababa only.
 
 ``` python
 #filtering only sub cities of Addis Ababa (no Lemi Kura in openstreetmap's data)
@@ -128,11 +128,11 @@ plt.show()
 ```
 <img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-5-5.png" width="672" />
 
-From this plot I chose to proceed with road networks.
+From this plot, I chose to proceed with road networks.
 Why did I choose roads?
 
-- The shop counts are really lower than I expected with even lower kiosk numbers.
-- As we can see some buildings not shown by the buildings green plot are actually covered by the roads' structure. 
+- The shop counts are really lower than I expected, with even lower kiosk numbers.
+- As we can see, some buildings not shown by the green plot are actually covered by the roads' structure. 
 
 
 
@@ -152,7 +152,7 @@ edges.head()
 3  LINESTRING (38.74680 9.022231, 38.74679 9.022...
 4  LINESTRING (38.74679 9.022170, 38.74678 9.022...
 ```
-In geospatial analysis, before any calculation that concerns distances, it is vital to check whether geometry is in degrees or distance friendly unitls (like meter).
+In geospatial analysis, before any calculation that concerns distances, it is vital to check whether geometry is in degrees or distance-friendly units (like meters).
 ``` python
 #checking the crs
 edges.crs
@@ -171,7 +171,7 @@ Datum: World Geodetic System 1984
 - Ellipsoid: WGS 84
 - Prime Meridian: Greenwich
 ```
-As we can see the `crs` is in `WGS 84`, which uses degrees rather than meters. It needs to be converted.
+As we can see, the `crs` is in `WGS 84`, which uses degrees rather than meters. It needs to be converted.
 ``` python
 edge_points = edges.copy()
 #converting to meters crs (UTM zone 37N for Ethiopia)
@@ -226,7 +226,7 @@ We now have standardized x-y coordinates that allow us to perform **distance-bas
 
 ## Step 3: Run KMeans Clustering
 
-I used elbow plot to determine optimal number of clusters. This will accomplish one of our goals, i.e, finding the optimal number of clusters.
+I used an elbow plot to determine the optimal number of clusters. This will accomplish one of our goals, i.e, finding the optimal number of clusters.
 
 ``` python
 # plotting an elbow plot
@@ -264,7 +264,7 @@ array([3, 3, 3, ..., 1, 1, 1], dtype=int32)
 edge_points["cluster"] = kmeans_7.labels_
 edge_points = edge_points.set_geometry("geometry")
 ```
-For latter plots, I created a copy of the results, but with degrees instead of meters.
+For the latter plots, I created a copy of the results, but with degrees instead of meters.
 ```python
 # converting to degrees
 edge_points_latlon = edge_points.to_crs("EPSG:4326")
@@ -283,7 +283,7 @@ plt.show()
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-14-9.png" width="672" />
 
-We can now fulfill another one of our goals. We can find the center of the clusters. I used these results in the interactive plots that I will talk about later.
+We can now fulfil another one of our goals. We can find the center of the clusters. I used these results in the interactive plots that I will talk about later.
 ``` python
 #Extracting cluster centroids
 cluster_centers = scaler.inverse_transform(kmeans.cluster_centers_)
@@ -401,9 +401,9 @@ fig
 
 [View Interactive Map](/img/map.html) 
 
-*You may have to wait a bit to see the full results depending on you internet connection.*
+*You may have to wait a bit to see the full results depending on your internet connection.*
 
-This map can be helpful in a **real world application** of these clusters. You can get the gps location of each point (road center) and information on to what cluster it belongs by just hovering your curser over the point. You can see the cluster centers written in white. You can zoom in and see their exact location and around what areas they are found.
+This map can be helpful in a **real-world sampling application** of these clusters. You can get the gps location of each point (road center) and information on to what cluster it belongs by just hovering your cursor over the point. You can see the cluster centers written in white. You can zoom in and see their exact location and around where they are found.
 
 ## Conclusion
 This workflow helps uncover potential alternative ways to group regions in Addis Ababa beyond administrative borders. It’s especially useful when official boundaries are outdated, inconsistent, or not granular enough for your project.
