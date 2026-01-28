@@ -5,6 +5,7 @@ author: "Natnael G. Mengistu et al."
 date: "2025-12-31"
 draft: false
 excerpt: "A deep dive into spatial smoothing, overdispersion, and disease mapping in the Gambela region using the Malaria Atlas Project data."
+featured_image: featured-hex.png
 categories:
   - Spatial Analysis
   - Public Health
